@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="third_form.css">
+	</head>
+	<body>
+		<h1>Test Form</h1>
+		<form>
+			<label for="firstName">First Name: </label><br>
+			<input type="text" name="firstName"><br>
+			<label for="lastName">Last Name: </label><br>
+			<input type="text" name="lastName"><br><br>
+			
+			<fieldset style="background-color:lightgray;">
+				<legend style="background-color:black; color:white;"><h2>Gender</h2></legend>
+				<input type="radio" name="gender" value="male" >
+				<label for="gender">Male</label><br>
+				<input type="radio" name="gender" value="female">
+				<label for="gender">Female</label>
+			</fieldset>
+			<fieldset style="background-color:lightgray;">
+				<legend style="background-color:black; color:white;"><h2>Race</h2></legend>
+				<input type="checkbox" name="subject" id="sinhala" value="sinhala">
+				<label for="sinhala">Sinhala</label><br>
+				<input type="checkbox" name="subject" id="tamil" value="tamil">
+				<label for="Tamil">Tamil</label><br>
+				<input type="checkbox" name="subject" id="Muslim" value="Muslim">
+				<label for="sinhala">Muslim</label><br>
+			</fieldset>
+			
+			<fieldset style="background-color:lightgray;">
+				<legend style="background-color:black; color:white;"><h2>Religion</h2></legend>
+				<select name="religion">
+					<option value="Buddhist">Buddhist</option>
+					<option value="Christian">Christian</option>
+					<option value="Hindu">Hindu</option>
+					<option value="Islam">Islam</option>
+				</select>
+			</fieldset><br>
+			<strong><p>Please input your comments </p></strong>
+			<textarea rows="12" cols="20">
+			</textarea><br><br>
+			<input type="submit"><br><br>
+			<input type="button" onclick="alert('Done')" value="Done">
+		</form>
+	</body>
+</html>

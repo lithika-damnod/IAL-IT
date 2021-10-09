@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> Celcius to Farenhite </title> 
+	</head> 
+	<body> 
+		<form> 
+			<input type="number" name="celcius" id="cel-inp" placeholder="Celcius Value">
+			<input type="button" value="convert" id="conv-btn">
+		</form> 
+		<p id="dispF"></p>
+		<script> 
+			function celcius_to_farenhite(c){
+				return (c*9/5) + 32; 
+			}
+			document.getElementById("conv-btn").addEventListener("click", function(){
+				let argVal = parseInt(document.getElementById("cel-inp").value); 
+				document.getElementById("dispF").innerHTML = celcius_to_farenhite(argVal); 
+			}); 
+		</script> 
+	</body> 
+</html> 

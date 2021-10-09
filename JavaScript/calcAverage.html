@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+	<h1>Average</h1>
+	<form>
+		<input type="number" id="mark1">
+		<input type="number" id="mark2">
+		<input type="number" id="mark3">
+		<button type="button" id="submitButton">calculate</button><br><br>
+	</form> 
+	<p id="averageMarks"></p>
+	<script> 
+		function calcAverage(a, b, c){
+			let total = a + b + c; 
+			let average = total / 3; 
+			return average; 
+		}
+		document.getElementById("submitButton").addEventListener("click", function(){
+			let num1 = parseInt(document.getElementById("mark1").value);
+			let num2 = parseInt(document.getElementById("mark2").value);
+			let num3 = parseInt(document.getElementById("mark3").value);
+			document.getElementById("averageMarks").innerHTML = calcAverage(num1, num2, num3);
+		});  
+	</script> 
+</html> 

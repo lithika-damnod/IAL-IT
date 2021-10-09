@@ -1,0 +1,42 @@
+<!doctype html> 
+<html> 
+	<head> 
+	</head> 
+	<body>
+		<form> 
+			<label for="firstName">First Name </label> 
+			<input type="text" name="firstName"><br><br> 
+			<label for="address">Address</label>
+			<input type = "text" name="address"><br><br>
+			<fieldset style="margin-bottom: 25px;">
+			<legend>Gender</legend>
+			<label for="gender">Male</label> 
+			<input type = "radio" name="gender" value="male"><br>
+			<label for="gender"> Female </label>
+			<input type="radio" name="gender" value="female"><br>
+			</fieldset>
+			<fieldset>
+			<legend>Subjects</legend>
+			<input type="checkbox" id="it" name="subject" value="IT">
+			<label for="it">IT</label><br>
+			<input type="checkbox" id="physics" name="subject" value="physics">
+			<label for="physics"> Physics</label><br>
+			<input type="checkbox" id="pureMathematics" name="subject" value="pure_Mathematics">
+			<label for="pure_Mathematics"> Pure Mathematics</label><br>
+			<input type="checkbox" id="furtherMathematics" name="subject" value="further_Mathematics">
+			<label for="further_Mathematics"> Further Pure Mathematics</label><br>
+			</fieldset><br>
+			<textarea name="comment" rows="5" cols="20">
+				Please leave your comments here
+			</textarea>
+			<select name="grade">
+			<option value="as">AS</option>
+			<option value="a2">A2</option>
+			</select><br><br>
+			<input type="button" onclick="alert('Hello, You clicked ME')" value="Click Me">
+			<input type="submit" value="Submit">
+			</form>
+		
+		
+	</body> 
+</html> 

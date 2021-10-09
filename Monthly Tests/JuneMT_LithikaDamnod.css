@@ -1,0 +1,28 @@
+body{
+	background-color:#0000FF;
+	font-family:Verdana
+	color:#CCCCCC;
+	text-align:center;
+}
+.leftSide{
+	height:500px;
+
+}
+#rightSide{
+	height:500px;
+	width:500px;
+	
+}
+#navBar{
+	width:1000px;
+	height:50px;
+	background-color:grey;
+	display:inline-block;
+	
+}
+#bigPhoto{
+	float:right;
+}
+footer{
+	color:#FFFF00;
+}

@@ -1,0 +1,21 @@
+
+input[type=password]{
+	width:30%;
+	border: 3px solid red;
+	background-color: yellow;
+}
+input[type=email]{
+	width:50%;
+	border: 15px solid orange;
+	padding: 5px;
+}
+#username{
+	width:100%;
+	border: 3px solid blue;
+}
+
+#textBox{
+	width: 45%;
+	border: none;
+	border-bottom: 3px double green;
+}

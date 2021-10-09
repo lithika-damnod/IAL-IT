@@ -1,0 +1,37 @@
+body{
+	background-color:#f9f8da;
+}
+.stores{
+	width: 450px;
+	margin-left:50px auto;
+}
+.main-heading{
+	font-size:70px;
+	color:#205d76;
+	text-align:center;
+}
+.town-image{
+	width:650px;
+	
+}
+.section-image{
+	width:200px;
+}
+.divisions{
+	margin-left:30px;
+}
+.list-tag{
+	color:#ffc122;
+}
+.heading{
+	font-size:30px;
+	color:#205d76;
+}
+footer{
+	background-color:#ffc122;
+	text-align:center;
+}
+#footer-text{
+	font-size:20px;
+	color:#ffff;
+}

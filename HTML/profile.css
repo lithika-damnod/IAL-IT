@@ -1,0 +1,32 @@
+			.favourite-block{
+				display: inline-block; 
+				height: 100px; 
+				width: 100px; 
+				border-radius: 50%; 
+				background-color: black; 
+				margin-right:	 5px; 
+				object-fit: cover; 
+				overflow: hidden; 
+				border: 1px solid blue; 
+			}
+h1{
+	color: red;
+	background-color: gray; 
+	border: 5px solid black; 
+	padding: 50px; 
+}
+#about-heading{
+	color: blue; 
+}
+#fav-heading{
+	color: yellow; 
+}
+#contact-heading{
+	color: green; 
+}
+p{
+	font-size: 24px; 
+}
+#profilePic{
+	float: left; 
+}

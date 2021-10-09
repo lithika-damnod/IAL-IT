@@ -1,0 +1,12 @@
+#div1{
+	width:250px;
+	height:150px;
+	border: 5px solid red;
+	margin:100px 25px;
+}
+#div2{
+	width:250px;
+	height:150px;
+	border: 5px solid blue;	
+	padding:50px;
+}

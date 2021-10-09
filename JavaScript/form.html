@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<style>
+			body{
+				font-family: calibri; 
+			}
+			input[type=text] {
+				width: 60%;
+			}
+			form{
+				width: 600px; 
+				background-color: lightblue; 
+				padding: 50px; 
+				border-radius: 10px; 
+			}
+			h1{
+				color: lightblue; 
+				background-color: blue; 
+				padding: 10px; 
+				text-align: center; 
+				border-radius: 5px; 
+			}
+			textarea{
+				font-family: calibri; 
+			}
+		</style> 
+		
+		<!-- JavaScript --> 
+		<script>
+		
+			function validateForm(){
+				var name = document.forms["regForm"]["name"]; 
+				var address = document.forms["regForm"]["address"]; 
+				var email = document.forms["regForm"]["email"]; 
+				var passwd = document.forms["regForm"]["password"]; 
+				var phone = document.forms["regForm"]["phone"]; 
+				
+				if(name.value == ""){
+					alert("Please enter your name"); 
+				}
+				if(address.value == ""){
+					alert("Please enter your address"); 
+				}
+				if(email.value == ""){
+					alert("Please enter your email"); 
+				}
+				if(passwd.value == ""){
+					alert("Please enter your password"); 
+				}
+				if(phone.value == ""){
+					alert("Please enter your phone number"); 
+				}
+				
+			}
+			
+		</script> 
+		
+	</head> 
+	<body> 
+		<h1> Sign Up </h1> 
+		<form name="regForm"> 
+			<label for="name"> Full Name </label><br>
+			<input type="text" name="name"><br><br>
+			<label for="address"> Address </label><br>
+			<input type="text" name="address"><br><br>
+			<label for="email"> Email </label><br>
+			<input type="email" name="email"><br><br>
+			<label for="password"> Password </label><br>
+			<input type="password" name="password"><br><br>
+			<label for="phone"> Phone </label><br>
+			<input type="text" name="phone"><br><br>
+			<label for="course"> Course </label><br>
+			<select id="course" name="course"> 
+				<option vlaue="tec">Technology</option>
+				<option vlaue="sci">Science</option>
+				<option vlaue="com">Commerce</option>
+				<option vlaue="art">Arts</option>
+			</select><br><br>
+			<label for="comments"> comments </label><br>
+			<textarea id="comments" name="comments" cols = "50" rows="5">
+			</textarea><br><br>
+			<type="reset" value="reset" name="reset">
+			<button type="button" value="send" name="submit" onclick="validateForm()">Submit</button>
+		</form>
+	</body> 
+</html>

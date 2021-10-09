@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+	<body> 
+		<p id="demo"></p>
+		<p id="demo2"></p>
+		
+		<script> 
+		
+			document.getElementById("demo").innerHTML = celsiusToFarenhite(32); 
+			
+			//convert Celsius to Farenhite
+			function celsiusToFarenhite(c){
+				return (5/9) * (c-32); 
+			}
+			// convert grams to ounces
+			function grams_to_ounces(g){
+				return g/28.35; 
+			}
+			
+			function cm_inch(cm){
+				return cm/2.54; 
+			}	
+			
+			document.getElementById("demo2").innerHTML = grams_to_ounces(100) + " ounces"; 
+			
+			
+		</script>
+	</body> 
+</html>

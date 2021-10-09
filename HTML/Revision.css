@@ -1,0 +1,15 @@
+body{
+	background-color: yellow; 
+}
+#section1{
+	background-color: grey; 
+}
+
+#section2{
+	background-color: lightblue; 
+	height: 600px; 
+	width: 600px;
+	float: right;
+	display: inline-block;
+}
+
