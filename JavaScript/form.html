@@ -35,9 +35,15 @@
 				var email = document.forms["regForm"]["email"]; 
 				var passwd = document.forms["regForm"]["password"]; 
 				var phone = document.forms["regForm"]["phone"]; 
-				
+				var age = document.forms["regForm"]["age"]; 
 				if(name.value == ""){
 					alert("Please enter your name"); 
+				}
+				if(age.value == ""){
+					alert("	Please enter your age"); 
+				}
+				if(isNaN(age) || age < 15 || age > 20){
+					alert("Please input a number between age 15 and 20");   
 				}
 				if(address.value == ""){
 					alert("Please enter your address"); 
@@ -45,13 +51,18 @@
 				if(email.value == ""){
 					alert("Please enter your email"); 
 				}
+				var atPos = email.indexOf("@"); 
+				var dotPos = email.lastIndexOf(".");
+				if(atPos < 1 || (dotPos-atPos) < 2){
+					alert("please enter a valid email address"); 
+				}				
 				if(passwd.value == ""){
 					alert("Please enter your password"); 
 				}
 				if(phone.value == ""){
 					alert("Please enter your phone number"); 
 				}
-				
+
 			}
 			
 		</script> 
@@ -62,10 +73,12 @@
 		<form name="regForm"> 
 			<label for="name"> Full Name </label><br>
 			<input type="text" name="name"><br><br>
+			<label for="age"> Age </label><br> 
+			<input type="text" name="age"><br><br>
 			<label for="address"> Address </label><br>
 			<input type="text" name="address"><br><br>
 			<label for="email"> Email </label><br>
-			<input type="email" name="email"><br><br>
+			<input type="text" name="email"><br><br>
 			<label for="password"> Password </label><br>
 			<input type="password" name="password"><br><br>
 			<label for="phone"> Phone </label><br>

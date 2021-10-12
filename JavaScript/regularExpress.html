@@ -8,7 +8,8 @@
 		<p id="resultPrev"></p> 
 		<script>
 			var msg = "One small step for man, one giant leap for mankind.";  
-			var result = msg.match(/one/ig);
+			var pattern = /[A-Z]/ig; 
+			var result = msg.match(pattern);
 			document.getElementById("resultPrev").innerHTML = result; 
 		</script> 
 	</body> 
