@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 
+		<title> Regular Expressions </title> 
+		<meta charset="UTF-8">
+	</head> 
+	<body> 
+		<p id="resultPrev"></p> 
+		<script>
+			var msg = "One small step for man, one giant leap for mankind.";  
+			var result = msg.match(/one/ig);
+			document.getElementById("resultPrev").innerHTML = result; 
+		</script> 
+	</body> 
+</html>
