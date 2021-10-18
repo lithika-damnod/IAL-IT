@@ -51,8 +51,10 @@
 				if(email.value == ""){
 					alert("Please enter your email"); 
 				}
+				
 				var atPos = email.indexOf("@"); 
 				var dotPos = email.lastIndexOf(".");
+				
 				if(atPos < 1 || (dotPos-atPos) < 2){
 					alert("please enter a valid email address"); 
 				}				
