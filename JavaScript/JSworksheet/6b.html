@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Sort</title> 
+	</head> 
+	<body> 
+		<h1>Sorting a list</h1> 
+		<p> The list: </p> 
+		<ul id="arr-elmnts"> 
+		</ul>
+		<button type="button" id="sort-btn">Sort</button> 
+		
+		<script> 
+			var arr = ["banana", "apple", "lemon","cherry", "orange", "pear", "strawberry"]; 
+			ulElmnt = document.getElementById("arr-elmnts"); 
+			for(let i=0; i<arr.length; i++){
+				var appendLI  = document.createElement("li"); 
+				appendLI.innerHTML = arr[i]; 
+				ulElmnt.appendChild(appendLI); 
+			}
+			document.getElementById("sort-btn").addEventListener("click", function(){
+				ulElmnt.innerHTML = ""; 
+				sortedArr = arr.sort(); 
+				for(let i=0; i<arr.length; i++){
+					var appendLI  = document.createElement("li"); 
+					appendLI.innerHTML = arr[i]; 
+					ulElmnt.appendChild(appendLI); 
+				}
+			}); 
+		</script> 
+	</body> 
+</html> 

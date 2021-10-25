@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Array example</h1>
+
+<p>Add to values to the array: </p>
+
+<form id="add-form" name="myAdd" method="post">
+
+<input type="text" name="myInput">
+
+<input type="submit" value="Go">
+
+</form>
+
+<p>Get values from the array by entering the array index (starts at zero)</p>
+
+<form id="get-form" name="myGet" method="post">
+
+<input type="text" name="theIndex">
+
+<input type="submit" value="Go">
+
+</form>
+
+<script>
+
+var theArray = ["apple"];
+
+//reference the forms in DOM
+
+var addForm = document.getElementById('add-form');
+
+var getForm = document.getElementById('get-form');
+
+//use an event listener otherwise submitting the form resets the variables
+
+addForm.addEventListener('submit', addValue);
+
+getForm.addEventListener('submit', getValue);
+
+function addValue(event) {
+
+event.preventDefault(); // Stops the form submission
+
+var myValue = document.forms["myAdd"]["myInput"].value;
+
+theArray.push(myValue);
+
+alert("Value added to the array");
+
+}
+
+function getValue(event) {
+
+event.preventDefault();
+
+var myIndex = document.forms["myGet"]["theIndex"].value;
+
+alert(theArray[myIndex]);
+
+}
+
+</script>
+
+</body>
+
+</html>

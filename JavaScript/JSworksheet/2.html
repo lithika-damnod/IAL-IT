@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> Guess Number </title> 
+		<script> 
+			var randNum = Math.floor(Math.random()*10);
+		</script> 
+	</head>
+	<body> 
+		<h1>Guess the number</h1>
+		<input type="number" id="numInput">
+		<button type="button" id="check-btn">Check</button>
+		<p id="game-status"></p> 
+		<script> 
+			document.getElementById("check-btn").addEventListener("click", function(){
+				var inpNum = document.getElementById("numInput").value; 
+				if(inpNum != randNum){
+					if(inpNum > randNum){
+						document.getElementById("game-status").innerHTML = "The number you entered is higher than the random number, Try Again";
+					}
+					else if(inpNum < randNum){
+						document.getElementById("game-status").innerHTML = "The number you entered is less than the random number, Try Again"; 
+					}
+				}	
+				else{ 
+				
+					document.getElementById("game-status").innerHTML = "Congratulations, You won !! 👍👍";
+				}
+			}); 
+		</script> 
+	</body>
+</html> 

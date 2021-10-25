@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Tabbed pages</title> 
+		<style> 
+			h1{
+				font-family: calibri; 
+			}
+			.nav-bar{
+				display: inline-flex; 
+				background-color: lightblue; 
+				width: 100%; 
+				height: 50px; 
+				justify-content: center; 
+			}
+			.nav-block{
+				display: flex; 
+				background-color: lightblue; 
+				border:2px solid black; 
+				width: 150px; 
+				margin-right: 5px; 
+				justify-content: center; 
+				align-items: center; 
+				font-family: sans-serif; 
+				font-weight: bold; 
+				cursor: pointer; 
+			}	
+			#content-space{
+				display: inline-block; 
+				background-color: #d3def0; 
+				height: 500px; 
+				width: 100%;  
+				position: relative; 
+			}
+			.turnDarkBlue{
+				background-color: blue; 
+			}
+			body{
+				font-family: calibri; 
+			}
+			#content{
+				position: relative; 
+				left: 20px; 
+			}
+		</style> 
+	</head> 
+	<body> 
+		<h1>IAL Course</h1>
+		<div class="nav-bar">
+			<div class="nav-block" id="unit1">
+				<p> Unit 1 </p> 
+			</div> 
+			<div class="nav-block" id="unit2">
+				<p> Unit 2 </p> 
+			</div> 
+			<div class="nav-block" id="unit3">
+				<p> Unit 3 </p> 
+			</div> 
+			<div class="nav-block" id="unit4">
+				<p> Unit 4 </p> 
+			</div> 
+		</div>
+		<div id="content-space">
+			<div id="content">
+			</div>
+		</div> 
+		<script> 
+			document.getElementById("unit1").addEventListener("click", function(){
+				document.getElementById("unit1").classList.add("turnDarkBlue");
+				document.getElementById("unit2").classList.remove("turnDarkBlue");
+				document.getElementById("unit3").classList.remove("turnDarkBlue");				
+				document.getElementById("unit4").classList.remove("turnDarkBlue");
+				document.getElementById("content").innerHTML = `<h3> Unit 1 </h3> 
+					<p>Unit 1 is all about IT systems, and covers the following topics: 
+					<ul> 
+						<li>Topic 1: Hardware and software </li> 
+						<li>Topic 2: Networks </li> 
+						<li>Topic 3: The online environment </li> 
+						<li>Topic 4: IT systems </li> 
+						<li>Topic 5: Data and databases</li> 
+						<li>Topic 6: Wider issues</li> 
+					</ul>`
+			}); 
+			
+			document.getElementById("unit2").addEventListener("click", function(){
+				document.getElementById("unit1").classList.remove("turnDarkBlue");
+				document.getElementById("unit2").classList.add("turnDarkBlue");
+				document.getElementById("unit3").classList.remove("turnDarkBlue");				
+				document.getElementById("unit4").classList.remove("turnDarkBlue");
+				document.getElementById("content").innerHTML = `<h3> Unit 2 </h3> 
+					<p>Unit 2 is all about understanding the concepts of information technology: 
+					<ul> 
+						<li>Topic 7: Understanding the functionality of HTML </li> 
+						<li>Topic 8: Understanding the functionality of CSS </li> 
+						<li>Topic 9: Understanding the functions of Javascript</li> 
+						<li>Topic 10: Designing web pages</li> 
+						<li>Topic 11: The semantic web.</li> 
+					</ul>`
+			}); 
+			
+			document.getElementById("unit3").addEventListener("click", function(){
+				document.getElementById("unit1").classList.remove("turnDarkBlue");
+				document.getElementById("unit2").classList.remove("turnDarkBlue");
+				document.getElementById("unit3").classList.add("turnDarkBlue");				
+				document.getElementById("unit4").classList.remove("turnDarkBlue");
+				document.getElementById("content").innerHTML = `<h3> Unit 3 </h3> 
+					<p>Unit 3 is all about analyse and evaluate IT problems: 
+					<ul> 
+						<li>Topic 12: Manipulating data</li> 
+						<li>Topic 13: Enabling technologies</li> 
+						<li>Topic 14: Using IT systems in organisations</li> 
+						<li>Topic 15: Systems development</li> 
+						<li>Topic 16: Emerging technologies.</li> 
+					</ul>`
+			}); 
+			
+			document.getElementById("unit4").addEventListener("click", function(){
+				document.getElementById("unit1").classList.remove("turnDarkBlue");
+				document.getElementById("unit2").classList.remove("turnDarkBlue");
+				document.getElementById("unit3").classList.remove("turnDarkBlue");				
+				document.getElementById("unit4").classList.add("turnDarkBlue");
+				document.getElementById("content").innerHTML = `<h3> Unit 4 </h3> 
+					<p>Unit 4 will be consists of practical and theoretical questions and may include short-openresponse, open-response and extended open-response questions: 
+					<ul> 
+						<li>Topic 17: Use of features of database solutions</li> 
+						<li>Topic 18: Relational database concepts</li> 
+						<li>Topic 19: Database solutions</li> 
+					</ul>`
+			}); 
+			
+		</script> 
+		
+	</body> 
+</html> 

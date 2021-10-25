@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+	<head> 
+		<title> Contact Form </title> 
+		<style> 
+			.heading{ 
+				display: inline-flex; 
+				width: 100%; 
+				height: 80px; 
+				background-color: lightgray; 
+				color: green; 
+				font-size: 1.8em; 
+				font-weight: bolder; 
+				justify-content: center; 
+				align-items: center; 
+				font-family: calibri; 
+			}
+			body{
+				background-color: lightgreen; 
+			}
+		</style> 
+		<script> 
+			function validateForm(){
+				var firstName = document.getElementById("firstName").value; 
+				var age = document.getElementById("age").value; 
+				var agreeCheck = document.getElementById("agree-tick"); 
+				if(firstName == ""){
+					alert("You have forgotten to enter a value for First Name 😂"); 
+				}
+				if(isNaN(age)){
+					alert("You have enter a Integer for the age"); 
+				}
+				if(!agreeCheck.checked){
+					alert("Please click the checkbox"); 
+				}
+			}
+		</script> 
+	</head> 
+	<body>
+		<div class="heading">
+			<p>Contact Form</p> 
+		</div>
+		<h3>Please complete your details</h3> 
+		<form> 
+			<label for="firstName">First Name: </label> 
+			<input type="text" name="firstName" id="firstName"><br><br> 
+			<label for="age">Age: </label> 
+			<input type="text" name="age" id="age"><br><br> 
+			<label for="address"> Address: </label> 
+			<input type="text" name="address"><br><br>
+			<label for="town">Town: <label> 
+			<input type="text" name="town"><br><br> 
+			<label for="Postcode">Postcode: <label> 
+			<input type="text" name="postCode"><br><br> 
+			<h4> By submitting, I agree that my details can be stored.</h4>
+			<label for="agree-tick"> I Accept: </label> 
+			<input type="checkbox" name="agree-tick" id="agree-tick"> <br><br><br>
+			<button type="button" onclick="validateForm()">submit</button> 
+		</form> 
+	</body>
+</html> 
