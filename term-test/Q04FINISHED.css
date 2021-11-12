@@ -1,0 +1,86 @@
+body{
+    margin: 0 auto;  
+    width: 1200px; 
+    background-color: #BBEEFF; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; 
+}
+.top-section{
+    display: flex; 
+    border: 5px solid black; 
+    margin-top: 5px; 
+}
+.logo-container{
+    display: block; 
+    width: 275px; 
+    height: 275px;  
+    margin: 5px; 
+}
+.main-image{
+    display: block; 
+    width: 915px; 
+    height: 275px;  
+    margin: 5px; 
+}
+.middle-section{
+    display: flex; 
+    border: 5px solid black; 
+    margin-top: 5px; 
+}
+.post-container{
+    display: block;  
+    height: 400px; 
+    width: 60%; 
+    margin: 5px; 
+    padding: 10px; 
+    border: 5px solid black; 
+}
+.about-author{
+    display: block;  
+    height: 400px; 
+    width: 40%; 
+    margin: 5px; 
+    padding: 10px; 
+    border: 5px solid black; 
+}
+.pic-container{
+    display: flex; 
+    justify-content: center;  
+}
+.author-pic{
+    width: 100px; 
+    height: 100px; 
+    background-color: white; 
+    border-radius: 10px; 
+}
+.footer{
+    display: flex; 
+    border: 5px solid black; 
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;  
+    width: 400px; 
+    height: 175;  
+    margin: 5px; 
+}
+.footer-nav a{
+    margin-left: 20px; 
+    margin-top: 10px; 
+}
+.footer-video{
+    width: 300px; 
+    height: 175px;  
+    margin: 5px;
+}
+.owner-details{
+    display: inline-flex; 
+    height: 175px; 
+    width: 460px;  
+    margin: 5px;
+    align-items: center; 
+    text-align: center; 
+    color: blue; 
+}
