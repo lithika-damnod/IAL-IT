@@ -3,11 +3,15 @@
 	</head> 
 	<body>
 	<p id="test1"></p>
+	<p id="test2"></p>
 		<script> 
 			const names = ["Manudith", "Himath", "Lithika", "Sandes", "Ruhaim"]; 
 			var x; 
-			x = names.reverse(); 
-			document.getElementById("test1").innerHTML = x; 
+			
+			x = names.sort(); 
+			y = names.reverse(); 
+			document.getElementById("test1").innerHTML = x;
+			document.getElementById("test2").innerHTML = y; 
 		</script> 
 	</body>
 <html> 
