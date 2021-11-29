@@ -1,0 +1,17 @@
+.container{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    grid-auto-rows: 100px; 
+    grid-gap: 5px;   
+}
+.square{
+    width: auto; 
+    height: auto; 
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9em; 
+    color: white; 
+    font-family: calibri; 
+    padding: 10px; 
+}
