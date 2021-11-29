@@ -1,0 +1,37 @@
+<!doctype html> 
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script> 
+			function sortList(){
+				var unLi = document.querySelectorAll("li"); 
+				var nList = unLi.length; 
+				var arr = []; 
+				arr.length = nList; 
+				
+				// push li elements to the array 
+				for(var i=0; i<nList; i++){
+					arr[i] = unLi[i].innerHTML; 
+				}
+				
+				//sort array
+				var sortArr = arr.sort(); 
+				
+				//display elements
+				for(var i=0; i<nList; i++){
+					unLi[i].innerHTML = sortArr[i]; 
+				}
+			}
+		</script> 
+	</head>
+	<body>
+		<ul>
+			<li>D</li>
+			<li>C</li>
+			<li>E</li>
+			<li>A</li>
+			<li>B</li>
+		</ul>
+		<button id="sort" onclick="sortList()">Sort</button>
+	</body>
+</html> 
