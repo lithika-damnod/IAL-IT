@@ -1,0 +1,60 @@
+<!doctype html> 
+<html> 
+    <head>
+        <title>Events JS</title>
+        <style>
+            .color-box{
+                display: block; 
+                width: 100px; 
+                height: 100px; 
+                background-color: lightcoral;
+            }
+            .onClick{
+                background-color: lightpink; 
+            }
+            .onHover{
+                background-color: lightblue; 
+            }
+            .onPress{
+                background-color: lightsalmon; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>On Click</h1>
+        <div class="color-box" id="box-1">
+        </div>
+        <h1>On Hover</h1>
+        <div class="color-box" id="box-2">
+        </div>
+        <h1>On Keydown</h1>
+        <div class="color-box" id="box-3"></div>
+        <h1>Focus and Blur </h1> 
+			<input id="somthingRandom">
+		<script> 
+
+            // onclick
+            document.getElementById("box-1").addEventListener("click", function(){
+                document.getElementById("box-1").style.width = "500px";
+                document.getElementById('box-1').style.height = "500px"; 
+            }); 
+
+            // on hover
+            document.getElementById("box-2").addEventListener("mouseover", function(){
+                document.getElementById("box-2").classList.add("onHover"); 
+            }); 
+            document.getElementById("box-2").addEventListener("mouseleave", function(){
+                document.getElementById("box-2").classList.remove("onHover"); 
+            }); 
+
+            // on keypress and keyreleases
+            document.addEventListener("keydown", function(){
+                document.getElementById("box-3").classList.add("onPress"); 
+            }); 
+            document.addEventListener("keyup", function(){
+                document.getElementById("box-3").classList.remove("onPress"); 
+            }); 
+
+        </script> 
+    </body>
+</html>
