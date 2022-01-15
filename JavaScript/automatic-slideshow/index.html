@@ -1,0 +1,142 @@
+<!doctype html> 
+<html>
+    <head>
+        <title>automatic slideshow</title>  
+        <style>
+            body{
+                margin: 0 auto; 
+            }
+            .header{
+                display: flex; 
+                justify-content: center;
+                background-color: whitesmoke;
+                width: 100%; 
+                height: 50px; 
+                align-items: center;
+                margin-bottom: 5px; 
+            }
+            h1{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+                font-weight: lighter; 
+                font-size: 2.5em;
+            }
+            .slide-play-area{
+                display: flex; 
+                background-color: black;
+                height: 450px; 
+                width: 100%;  
+            }
+            .slide-block{
+                display: block;
+                height: 450px; 
+                width: 100%; 
+                background-color: black;                 
+                position: absolute; 
+            }
+            .slide-block img{
+                object-fit: cover; 
+            }
+            .slide-caption{
+                display: block;
+                font-family: calibri;
+                padding: 10px;
+                position: absolute; 
+                top: 0;
+                left: 0;
+            }
+            .cap-heading{
+                font-size: 1.8em;
+                color: white;
+                margin-bottom: 0; 
+            }
+            .cap-description{
+                font-size: 1em; 
+                color: white; 
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .slide-block:not(:first-child){
+				display: none;
+			}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>slideshow</h1>
+        </div>
+        <div class="slide-play-area">
+            <div class="slide-block">
+                <div>
+                    <img src="images/wp2017236-stanford-university-wallpapers.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">Stanford University</p>
+                    <p class="cap-description">Stanford, California</p>
+                </div>
+            </div>
+            <div class="slide-block">
+                <div>
+                    <img src="images/somesh-kesarla-suresh-hWqrI3CyPuM-unsplash.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">Harvard University</p>
+                    <p class="cap-description">Cambridge, Massachusetts</p>
+                </div>
+            </div>
+            <div class="slide-block">
+                <div>
+                    <img src="images/wp7389157-massachusetts-institute-of-technology-wallpapers.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">Massachusetts Institute of Technology</p>
+                    <p class="cap-description">Cambridge, Massachusetts</p>
+                </div>
+            </div>
+            <div class="slide-block">
+                <div>
+                    <img src="images/wp5398349-yale-university-wallpapers.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">Yale University</p>
+                    <p class="cap-description">New Haven, Connecticut</p>
+                </div>
+            </div>
+            <div class="slide-block">
+                <div>
+                    <img src="images/wp5398349-yale-university-wallpapers.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">Yale University</p>
+                    <p class="cap-description">New Haven, Connecticut</p>
+                </div>
+            </div>
+            <div class="slide-block">
+                <div>
+                    <img src="images/wp2468658-university-wallpapers.jpg" height="450px" width="100%">
+                </div>
+                <div class="slide-caption">
+                    <p class="cap-heading">New York University</p>
+                    <p class="cap-description">New York, New York</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var index = 1;  
+            function switchSlides(n){
+                console.log("switchSlides(" + n  + "): called"); 
+                var allSlides = document.getElementsByClassName("slide-block"); 
+                if(n > allSlides.length-1){
+                    index = 1; 
+                }   
+                if( n < 1){
+                    n = allSlides.length; 
+                }
+                allSlides[n-1].style.display = "block"; 
+                allSlides[n-2].style.display = "none"; 
+            }
+            setInterval(function(){
+                index += 1; 
+                switchSlides(index);  
+            }, 2000);   
+        </script>
+    </body>
+</html> 
