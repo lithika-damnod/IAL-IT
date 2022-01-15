@@ -122,7 +122,6 @@
         <script>
             var index = 1;  
             function switchSlides(n){
-                console.log("switchSlides(" + n  + "): called"); 
                 var allSlides = document.getElementsByClassName("slide-block"); 
                 if(n > allSlides.length-1){
                     index = 1; 
@@ -130,13 +129,16 @@
                 if( n < 1){
                     n = allSlides.length; 
                 }
-                allSlides[n-1].style.display = "block"; 
-                allSlides[n-2].style.display = "none"; 
+                // display none all the slides 
+                for(var i=0; i<allSlides.length; i++){
+					allSlides[i].style.display = "none";  
+				}
+                allSlides[n-1].style.display = "block";  
             }
             setInterval(function(){
                 index += 1; 
                 switchSlides(index);  
-            }, 2000);   
+            }, 2000); 
         </script>
     </body>
 </html> 
