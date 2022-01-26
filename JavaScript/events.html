@@ -31,7 +31,8 @@
         <div class="color-box" id="box-3"></div>
         <h1>Focus and Blur </h1> 
 			<input id="somthingRandom">
-		<h1>Onload</h1>
+		<h1> MouseUp and MouseDown </h1>
+		<div class="color-box" id="box-4"></div>
 		<script> 
 
 			// onload
@@ -59,7 +60,9 @@
             document.addEventListener("keyup", function(){
                 document.getElementById("box-3").classList.remove("onPress"); 
             }); 
-
+			// on mouse down and mouse up
+			document.getElementById("box-4").addEventListener("mouseup").style.backgroundColor = "black"; 
+			document.getElementById("box-4").addEventListener("mousedown").style.backgroundColor = "blue"; 
         </script> 
     </body>
 </html>

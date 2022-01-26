@@ -1,0 +1,97 @@
+<!doctype html> 
+<html>
+    <head>
+        <title>Image Pop Up</title>
+        <style>
+            body{
+                width: 960px; 
+                margin: 0 auto; 
+                background-color: whitesmoke;
+            }
+            .img-block{
+                background-color: white; 
+                width: 350px; 
+                height: 200px; 
+                display: block;
+                margin: 20px; 
+                border-radius: 10px; 
+                border: 2px solid white; 
+                overflow: hidden; 
+                cursor: pointer; 
+            }
+            .img-block:hover{
+                border: 2px solid rgb(243, 207, 207);
+            }
+            .pop-up-block{
+                display: none;
+                background-color: rgb(213, 182, 241); 
+                width: 80%; 
+                height: 300px; 
+                margin: 30px; 
+                border-radius: 3px;
+                position: relative; 
+                overflow: hidden;
+            }
+            .pop-up-block img{
+                object-fit: cover; 
+            }
+            .close-btn{ 
+                padding: 10px; 
+                background-color: white; 
+                border-radius: 10px; 
+                margin-right: 10px; 
+                margin-top: 10px; 
+                position: absolute; 
+                right: 0; 
+                cursor: pointer; 
+            }
+            .close-btn:hover{
+                border-radius: 8px;  
+            }
+            @-webkit-keyframes zoom{
+				from{-webkit-transfor:scale(0)}
+				to{-webkit-transofr:scale(1)}
+			}
+			@keyframes zoom{
+				from{transform:scale(0)}
+				to{transform:scale(1)}
+			}
+			.pop-up-image-animation{
+				-webkit-animation-name: zoom;
+				-webkit-animation-duration: 0.6s;
+				animation-name:zoom; 
+				animation-duration: 0.6s;  
+			}
+        </style>
+    </head>
+    <body>
+        <div class="img-block">
+            <img src="photo-1536572701422-28e6051dd93f.jpg" height="100%" widht="100%" id="click-img">
+        </div>
+        <!-- Pop Up Div -->
+        <div class="pop-up-block">
+            <span class="close-btn">&times;</span>
+            <img src="photo-1536572701422-28e6051dd93f.jpg" height="100%" width="100%">
+        </div>
+        
+        <script> 
+            var clickable_img = document.getElementById("click-img"); 
+            clickable_img.addEventListener("click", function(){
+                document.getElementsByClassName("img-block")[0].style.display = "none";  
+                document.getElementsByClassName ("pop-up-block")[0].classList.add("pop-up-image-animation");
+                document.getElementsByClassName("pop-up-block")[0].style.display = "block";
+            });
+            var cross_icon = document.getElementsByClassName("close-btn")[0];  
+            cross_icon.addEventListener("click", function(){
+                document.getElementsByClassName("img-block")[0].style.display = "block"; 
+                document.getElementsByClassName("pop-up-block")[0].style.display = "none";
+            }); 
+            window.addEventListener("click", function(){
+                if(event.target != clickable_img){
+                    document.getElementsByClassName("img-block")[0].style.display = "block"; 
+                document.getElementsByClassName("pop-up-block")[0].style.display = "none";  
+                }
+            })
+        </script>
+    </body>
+</html>
