@@ -10,21 +10,27 @@
 			function performMarksCheck(){
 				var A = document.getElementById("marks").value; 
 				var text; 
-				switch(true){
-					case (A >= 81):
-						text = "A"; 
+				switch(A/10){
+					case 0:  
+					case 1:  
+					case 2:  
+					case 3:
+						text = "U"; 
 						break; 
-					case (A >= 71):
-						text = "B"; 
-						break; 
-					case (A >= 61):
-						text = "C"; 
-						break; 
-					case (A >= 41):
+					case 4:  
+					case 5: 
 						text = "D"; 
 						break; 
-					case (A >= 0):
-						text = "U"; 
+					case 6: 
+						text = "C"; 
+						break; 
+					case 7: 
+						text = "B";
+						break; 
+					case 8: 
+					case 9: 
+					case 10:
+						text = "A"; 
 						break; 
 				} 
 				document.getElementById("test").innerHTML = text;
