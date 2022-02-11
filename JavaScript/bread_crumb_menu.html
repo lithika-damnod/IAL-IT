@@ -1,0 +1,50 @@
+<!doctype html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                margin: 0; 
+            }
+            .nav-container{
+                padding: 20px;
+                background-color:rgb(198, 227, 243); 
+            }
+            .nav-container ul{
+                background-color: rgb(198, 227, 243); 
+                list-style: none;
+                color: white;   
+                margin: 0; 
+                font-size: 1.2em; 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            }
+            .nav-container a{
+                text-decoration: none; 
+                color: rgb(238, 161, 161);   
+            }
+            .nav-container a:hover{
+                color:rgb(224, 148, 148); 
+            }
+            .nav-container ul li{
+                display: inline; 
+            }
+            
+            /* puts "/" between all the li elements */
+            .nav-container ul li+li:before{
+                content: "/"; 
+                padding: 20px; 
+                color: black; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li>Events</li>   
+            </ul>
+        </div>        
+    </body>
+</html>
