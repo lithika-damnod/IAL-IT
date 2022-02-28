@@ -1,0 +1,46 @@
+<!Doctype html> 
+<html> 
+	<head>
+		<title>switch month</title> 
+	</head> 
+	<body>
+		<input type="number" placeholder="year" id="year-no"> 
+		<input type="number" id="month-no" placeholder="month">
+		<input type="submit" id="submit-btn" onclick="checkMonthDates()">
+		<p id="day-count"></p>	
+		<script> 
+			function checkMonthDates(){
+				var month_number = document.getElementById("month-no").value; 
+				var year_number = document.getElementById("year-no").value;  
+				var nDates = 0; 
+				console.log(month_number); 
+ 				switch(month_number){ 
+					case 2:
+						nDates = (year_number % 4 == 0)?29: 28; 
+						break; 
+					case 1:
+					case 3: 
+					case 5: 
+					case 7:
+					case 8: 
+					case 10: 
+					case 12: 
+						nDates = 31; 
+						break; 
+					case 4: 
+					case 6: 
+					case 9: 
+					case 11: 
+						nDates = 30; 
+						break; 
+					
+					default: 
+						nDates = 31; 
+						break; 
+				}
+				console.log(nDates); 
+				document.getElementById("day-count").innerHTML = nDates; 
+			}
+		</script> 
+	</body>
+</html> 

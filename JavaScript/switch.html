@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<input type="number" name="marks" id="marks">
+		<input type="submit" id="submit-btn" onclick="performMarksCheck()">
+		<p id="test"></p>
+		<script> 
+			function performMarksCheck(){
+				var A = document.getElementById("marks").value; 
+				var text; 
+				switch(A/10){
+					case 0:  
+					case 1:  
+					case 2:  
+					case 3:
+						text = "U"; 
+						break; 
+					case 4:  
+					case 5: 
+						text = "D"; 
+						break; 
+					case 6: 
+						text = "C"; 
+						break; 
+					case 7: 
+						text = "B";
+						break; 
+					case 8: 
+					case 9: 
+					case 10:
+						text = "A"; 
+						break; 
+				} 
+				document.getElementById("test").innerHTML = text;
+			}
+		</script> 
+	</body>
+</html>
