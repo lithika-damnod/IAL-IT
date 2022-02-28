@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(246, 247, 250); 
+    width: 960px; 
+    margin: 0 auto; 
+}
+.container{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.data-box{
+    display: block; 
+    width: 300px; 
+    height: 350px; 
+    background-color: rgb(228, 236, 247); 
+    border-radius: 5px;    
+    margin: 5px;  
+    overflow: hidden;
+    position: relative; 
+}
+.data-box img{
+    object-fit: cover;
+}
+.data-box img:hover{
+    width: 305px; 
+    height: 355px; 
+    cursor: pointer;  
+}
+.data-box:hover{
+    width: 305px;
+    height: 355px; 
+}
+.img-caption{
+    background-color: rgba(1, 1, 1, 0.5); 
+    color: white; 
+    position: absolute; 
+    top: 0; 
+    left: 0;  
+    font-size: 1.8em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-end-end-radius: 10px; 
+}
+.pop-up-div{
+    display: none;
+    background-color: rgb(238, 212, 253); 
+    width: 60%; 
+    height: 500px; 
+    position: fixed; 
+    top: 70px; 
+    left: 230px; 
+    border-radius: 10px; 
+    border: 2px solid white; 
+    overflow: hidden;
+}
+.control-bar{
+    padding: 10px; 
+    position: absolute; 
+    right: 0; 
+}
+.close{
+    background-color: white; 
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 50%; 
+    height: 20px; 
+    width: 20px; 
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center; 
+}
+.close:hover{
+    background-color: rgb(241, 180, 180); 
+    color: white; 
+    cursor: pointer; 
+}

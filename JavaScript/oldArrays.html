@@ -1,0 +1,35 @@
+<!doctype html> 
+<html lang="eng">
+    <head>  
+    </head>
+    <body>
+        <p id="text"></p>
+        <input type="text" id="inp-age">
+        <button type="button" onclick="filterAge()" id="filter_button">Filter</button>
+        <p id="output"></p>
+        <script> 
+            
+            var age = [15, 16, 17, 18, 19];
+            age.sort(); 
+            document.getElementById("text").innerHTML = "Ages: " + age; 
+            
+            function filterAge(){
+                inputVal = document.getElementById("filter_button").value;    
+                searchIndex = findAgeIndex(inputVal);
+                console.log("slicing");
+                newArr = age.slice(0, searchIndex); 
+                document.getElementById("output").innerHTML = "output: " + newArr; 
+            }
+            
+            function findAgeIndex(x){ 
+                console.log("running: findAgeIndex()")
+                for(var i=0; i<age.length; i++){
+                    if(age[i] == x){
+                        console.log(i);
+                        return i; 
+                    }
+                }
+            }
+        </script> 
+    </body> 
+</html>
