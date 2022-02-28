@@ -2,15 +2,33 @@
 <html> 
     <head>
         <title>Horizontal Scroll</title>
+        <style>
+            .menu{
+                background-color: black; 
+                overflow: auto; 
+                white-space: nowrap;
+            }
+            .menu a{
+                color: white; 
+                display: inline-block; 
+                padding: 15px; 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .menu a:hover{
+                background-color: tomato;
+            }
+        </style>
     </head>
     <body>
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
-        <a href="#">Gallery</a>
-        <a href="#">About Us</a>
-        <a href="#">News</a>
-        <a href="#">Blog</a>
-        <a href="#">Support</a>
-        <a href="#">Partners</a>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Gallery</a>
+            <a href="#">About Us</a>
+            <a href="#">News</a>
+            <a href="#">Blog</a>
+            <a href="#">Support</a>
+            <a href="#">Partners</a>
+        </div>
     </body>
 </html>
