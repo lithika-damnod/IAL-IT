@@ -1,0 +1,93 @@
+/* basic styling */
+body{
+    background-color: #0000FF;
+    font-family: Verdana; 
+    color: #CCCCCC; 
+    text-align: center; 
+}
+
+/* banner styling */
+.banner{
+    display: inline-block; 
+    width: 1000px; 
+    height: 100px;
+}
+.banner img{
+    width: 100%; 
+    height: 100%; 
+}
+
+/* navigation bar styling */ 
+.nav-container{
+    display: inline-flex; 
+    width: 1000px; 
+    height: 50px; 
+    background-color: rgb(128, 126, 126); 
+    align-items: center;
+}
+    /* button styling which is inside nav */ 
+    .nav-container .btn{ 
+        display: inline-flex; 
+        background-color: rgb(180, 177, 177);
+        width: 150px;
+        height: 35px;
+        margin-left: 10px; 
+        color: black; 
+        align-items: center;
+        justify-content: center; 
+    }
+    .nav-container .btn:active{
+        text-decoration: none; 
+    }
+
+/* styling for row that contains text area and the image */
+.row{
+    display: flex; 
+    justify-content: center; 
+}
+    .text-area{
+        display: inline-block; 
+        width: 500px; 
+        height: 500px; 
+    }
+    .img-area{
+        display: inline-block; 
+        width: 500px; 
+        height: 500px;  
+    }
+        /* spliting image area into sub parts */ 
+        .img-row{
+            display: flex; 
+        }
+        .img-col{
+            display: inline-block; 
+            width: 150px; 
+            height: 150px; 
+            background-color: white; 
+        }
+
+/* footer styling */ 
+.footer{
+    display: inline-flex; 
+    width: 1000px; 
+    height: 50px; 
+    background-color: rgb(163, 160, 160); 
+    align-items: center; 
+    justify-content: center; 
+}
+.footer a{
+    color: #FFFF00;  
+    text-decoration: none; 
+}
+.footer a:link{
+    color: #FFFF00; 
+}
+.footer a:hover{
+    color: #FFFF00; 
+}
+.footer a:visited{
+    color: #FFFF00; 
+}
+.footer a:active{
+    color: #FFFF00; 
+}
