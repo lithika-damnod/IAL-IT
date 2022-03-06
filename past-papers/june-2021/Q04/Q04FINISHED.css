@@ -2,24 +2,12 @@
 body{
     margin: 0; 
     font-family: Tahoma; 
-}
-/* main heading section default styling */
-
-
-/* reset the float values of bee photos when their out of the media query */
-/* first bee photo */ 
-.bee-pic:nth-child(1){
-    float: none; 
-}
-/* second bee photo */ 
-.bee-pic:nth-child(2){
-    float: none; 
+    overflow-x: hidden;
 }
 
-@media only screen and (min-width: 600px) { /* Responsive breakpoint - targets devices that have a minimum width of 600px and applies these styles */
-    body{
-        overflow-x: hidden;
-    }
+
+@media only screen and (max-width: 600px){
+    /* main section styles */ 
     .main-heading{
         display: block; 
         width: 100%; 
@@ -30,7 +18,68 @@ body{
         padding: 10px;  
     }
     .main-heading h1{
-        font-size: 40px; 
+        font-size: 40xpx; 
+        margin: 0;    
+        padding-top: 0; 
+        padding-bottom: 0px; 
+        margin-bottom: -10px; 
+    }
+    .main-heading h3{
+        margin: 0;  
+        font-size: 30px; 
+    }
+    
+    /* navigation bar styles */
+    .nav{
+        display: inline-flex; 
+        width: 100%; 
+        height: 50px;  
+        background-color: #ffe570;  
+        font-size: 14px; 
+        align-items: center; 
+        justify-content: end;
+    }
+    .nav a{
+        padding-right: 10px; 
+    }
+
+    /* reset the float values of bee photos when their out of the media query */
+    /* first bee photo */ 
+    .bee-pic:nth-child(1){
+        float: none; 
+        width: 100%;  
+    }
+    /* second bee photo */ 
+    .bee-pic:nth-child(2){
+        width: 100%; 
+        float: none; 
+    }
+    .data-block{
+        padding: 10px; 
+    }
+    .footer{
+        display: inline-flex; 
+        width: 100%; 
+        background-color: #ffe570; 
+        justify-content: center;
+        align-items: center;
+        font-size: 16px; 
+        height: 30px; 
+    }
+}
+
+@media only screen and (min-width: 600px) { /* Responsive breakpoint - targets devices that have a minimum width of 600px and applies these styles */
+    .main-heading{
+        display: block; 
+        width: 100%; 
+        height: 80px; 
+        margin: 0;  
+        background-color: #ffe570; 
+        border-bottom: 2px solid black; 
+        padding: 10px;  
+    }
+    .main-heading h1{
+        font-size: 24px; 
         margin: 0;    
         padding-top: 0; 
         padding-bottom: 0px; 
@@ -47,7 +96,7 @@ body{
         width: 100%; 
         height: 50px;  
         background-color: #ffe570;  
-        font-size: 16px; 
+        font-size: 14px; 
         align-items: center; 
         justify-content: end;
     }
@@ -71,7 +120,7 @@ body{
         background-color: #ffe570; 
         justify-content: center;
         align-items: center;
-        font-size: 16px; 
+        font-size: 14px; 
         height: 30px; 
     }
 }
