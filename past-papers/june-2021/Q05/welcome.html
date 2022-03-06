@@ -25,6 +25,7 @@
         
 
        // add code to display the username:
+       document.getElementById("welcomeMessage").innerHTML =  username; // get the element in the HTML DOM with ID "welcomeMessage" and print the value of variable username in it's innerHTML ( basically print out )
 
 
 
@@ -32,6 +33,22 @@
         The message for juniors is in the file junior.txt
         The message for adults is in the file adult.txt */
 
+        if(parseInt(age) === 15){ // if the age argument matches 15, go ahead and fire this if : meaning that the age must be lower than 15 or equal to 15
+          fetch('junior.txt')
+            .then(response => response.text())
+            .then(data=> {
+              // go and write for the corresponding p tag that's for displaying the message
+              document.getElementById("ageMessage").innerHTML = data;   
+            }); 
+        }
+        else{ // if the age doesn't equal to  15 : meaning that the age is greater than 15
+          fetch('adult.txt')
+            .then(response => response.text())
+            .then(data=> {
+              // go and write for the corresponding p tag that's for displaying the message
+              document.getElementById("ageMessage").innerHTML = data;   
+            }); 
+        }
       }
     </script>
     <h1>Thank you for your registration</h1>
