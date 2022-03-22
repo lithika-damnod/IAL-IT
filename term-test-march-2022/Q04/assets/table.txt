@@ -1,0 +1,5 @@
+Sailboat	Prices from (per day)
+Skipper Harley	£217
+The Isla	£131
+Princess Phoebe	£129
+Captain Joe	£183
