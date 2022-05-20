@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>EcoBee Welcome</title> 
+  </head>
+  <body onload = "getUserNameAndAge()">
+    <script>
+     function getUserNameAndAge(){
+        // get the URL of the page:
+        var urlAddress = window.location.href
+
+        //split the URL into an array after "=" is found":
+        var splitUrl = urlAddress.split("=")
+
+        // get the last element of the array, which holds the username and age passed to the page:
+        var usernameAndAge = splitUrl[splitUrl.length-1]
+
+        // get age:
+        var age = usernameAndAge.substring(9,11)
+
+        // get username:
+        var username = usernameAndAge.substring(0,8)
+
+        
+
+       // add code to display the username:
+      document.getElementById("welcomeMessage").innerHTML = username; 
+
+
+        /* add code to display the relevant age related message/
+        The message for juniors is in the file junior.txt
+        The message for adults is in the file adult.txt */
+      if(age <= 15){ // if age is less than or equal to 15 so junior.txt
+        document.getElementById('ageMessage').innerHTML = "Please note that in the next few weeks we will be adding a junior section to our website. You will automatically have access to that part of the site.  There will be fun things to do and weekly competitions."; 
+      }
+      else{ // adults so adult.txt
+        document.getElementById("ageMessage").innerHTML = "We would like to invite you to our weekly online fundraising idea forum. This takes place on a Tuesday between GMT hours of 19:00 and 20:00. We hope to see you there."; 
+      }
+     }
+    </script>
+    <h1>Thank you for your registration</h1>
+    <h2 id="welcomeMessage"><!-- username displays here  --></h2>
+    <p id="ageMessage"><!-- age related message displays here --></p>
+  </body>
+</html>
