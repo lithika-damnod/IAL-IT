@@ -1,0 +1,138 @@
+/* basic page styles */ 
+body{
+    margin: 0; 
+    font-family: Verdana; 
+}
+.container{
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* header section */ 
+header{
+    display: flex;
+    flex-direction: column; 
+    background-color: black; 
+}
+.logo-bar{
+    display: block; 
+    width: 100%;
+    padding: 10px;  
+    height: 50px; 
+}
+.logo-bar img{  
+    width: 100px; 
+}
+.description-bar{
+    display: block; 
+    width: 100%; 
+    padding: 5px; 
+    font-size: 16px; 
+    color: white; 
+    padding-left: 10px; 
+}
+
+/* subheading */
+.sub-header{
+    background-color: #BFEFFF; 
+    padding: 10px; 
+    text-align: center; 
+}
+.sub-header div{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+    justify-content: center; 
+}
+.sub-header div button{
+    margin-left: 10px; 
+    background-color: #BEBEBE; 
+    font-size: 16px;
+    color: black;
+    border: none;
+}
+.sub-header div button:hover{
+    color: white;
+}
+
+/* content */ 
+.content{
+    display: flex; 
+    flex-direction: column;   
+    font-size: 12px; 
+    text-align: justify; 
+}
+.content img{
+    margin: 5px; 
+}
+.section-1{
+    display: block; 
+    width: 100%; 
+    padding: 10px; 
+}
+.section-1 img{
+    width: 100%; 
+}
+.section-2{
+    display: block; 
+    width: 100%; 
+    padding: 10px; 
+}
+.section-2 img{
+    width: 100%; 
+}
+table{
+    width: 100%; 
+    background-color: #BEBEBE; 
+}
+th{
+    text-align: left;     
+}
+#table-headers{
+    background-color: #A9A9A9; 
+}
+footer{
+    color: white; 
+    background-color: black;
+    padding-left: 10px; 
+    font-size: 14px; 
+}
+@media only screen and (min-width: 600px) { /* Responsive breakpoint - targets devices that have a minimum width of 600px and applies these styles */
+    /* header section */ 
+    header{
+        flex-direction: row; 
+        padding-right: 10px; 
+        align-items: center;
+    }
+    .logo-bar{
+        height: 70px; 
+    }
+    .description-bar{
+        display: inline-flex;  
+        justify-content: flex-end;
+    }
+
+    /* subheading */
+    .sub-header{
+        text-align: left; 
+    }
+    .sub-header div{
+        justify-content: flex-start; 
+    }
+
+    /* content */ 
+    .content{
+        flex-direction: row;
+    }
+    .section-1, .section-2{
+        width: 50%; 
+    }
+    .section-1 img{
+        width: 50%; 
+        float: left; 
+    }
+    .section-2 .sub-section-1 img{
+        width: 50%; 
+        float: right;
+    }
+}
