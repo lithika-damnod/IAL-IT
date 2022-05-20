@@ -1,0 +1,104 @@
+body{
+    margin: 0; 
+    font-family: Tahoma;
+}
+.container{
+    display: flex; 
+    flex-direction: column; 
+}
+header{
+    background-color: #ffe570;
+    display: flex; 
+    padding-left: 20px; 
+    border-bottom: 2px solid black; 
+}
+header .main-heading{
+    font-size: 24px;
+}
+header .main-heading h1{
+    margin: 0; 
+    margin-top: 10px; 
+}
+header .sub-heading h3{
+    margin: 0; 
+    margin-bottom: 10px;
+}
+header .sub-heading{
+    font-size: 18px; 
+}
+nav{
+    display: flex; 
+    justify-content: flex-end;  
+    padding: 10px; 
+    font-size: 14px;
+    background-color: #ffe570; 
+}
+.content{
+    display: flex; 
+    flex-direction: column; 
+    text-align: justify;
+    padding: 10px; 
+}
+.content img{
+    width: 100%; 
+    object-fit: cover; 
+}
+.content .heading{
+    font-size: 20px; 
+}
+.content .text{
+    font-size: 14px; 
+}
+footer{
+    text-align: center; 
+    background-color: #ffe570; 
+    font-size: 14px; 
+    padding: 10px; 
+}
+
+@media only screen and (min-width: 600px) { /* Responsive breakpoint - targets devices that have a minimum width of 600px and applies these styles */
+    /* change fontsize */
+    
+    /* 24px -> 40px */
+    header .main-heading{
+        font-size: 40px;
+    }
+    /* 18px -> 30px */
+    header .sub-heading{
+        font-size: 30px; 
+    }
+    /* 14px -> 16px */
+    nav{
+        font-size: 16px; 
+    }
+    .content .text{
+        font-size: 16px; 
+    }
+    footer{
+        font-size: 16px; 
+        padding: 10px; 
+    }
+    /* 20px -> 32px */
+    .content .heading{
+        font-size: 32px; 
+    }
+    
+    /* change layout */
+    .content{
+        display: block; 
+    }
+    .content img{
+        margin: 10px; 
+        width: 300px; 
+    }
+    .article-1 img{
+        float: left; 
+    }
+    .article-2{
+        clear: both; 
+    }
+    .article-2 img{
+        float: right; 
+    }
+
+}
