@@ -10,26 +10,26 @@
         var age = document.forms.ageChoice.age.value;
        
 	      // add code to assign the input mobile phone to the mobileNumber variable
-         var mobileNumber = 
+        var mobileNumber = document.getElementById("mobile").value; 
 		 
          // regular expression that will accept a single uppercase letter followed by 1 or more lowercase letters:
         var acceptableNames = /^[A-Z]{1}[a-z]+$/
 
 		// add code to create a regular expression that will accept exactly 11 digits:
-        var acceptableMobile = 
+        var acceptableMobile = /^[0-9]{11}$/; 
         
         // display error if first name is not entered by user:
         if (acceptableNames.test(firstName) === false){
-          alert("First name must start with an uppercase letter followed by lowercase letters ")
+          alert("First name must start with an uppercase letter followed by lowercase letters "); 
 
-        }else if(/* add code to check if last name is invalid */){
+        }else if(acceptableNames.test(lastName) === false){
           
-          // add code to display suitable error message*/
+          alert("Last name must start with an uppercase letter followed by lowercase letters ");
           
 
-        }else if(/* add code to check if mobile number is invalid */){
+        }else if(acceptableMobile.test(mobileNumber) == false){
           
-          // add code to display suitable error message*/
+          alert("Mobile number should exactly have 11 digits"); 
          
        
         }else if(age === ""){
@@ -40,15 +40,15 @@
           var firstpart = firstName.substring(0,3)
 
           // add code to generate second part of username using first 2 letters of last name
-         
+         var secondpart = lastName.substring(0, 2); 
          
 
           // add code to generate final part of username using last 3 digits of mobile number
           
-
+          var finalpart = mobileNumber.substring(mobileNumber.length-3, mobileNumber.length); 
 
           // add code to create the username
-          var username = 
+          var username = firstpart + secondpart + finalpart; 
 
           // load welcome.html and pass username and age to it
            window.location.href = "welcome.html?userAndAge=" + username + "," + age
