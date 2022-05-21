@@ -1,0 +1,105 @@
+/* basic page styles */
+body{
+    font-family: Arial; 
+    margin: 0; 
+}
+/* container */
+.container{
+    display: flex; 
+    flex-direction: column; 
+}
+/* header */
+header{
+    background-color: #191970;
+}
+header .top-row{
+    width: 100%; 
+    display: flex;  
+    justify-content: space-between; 
+}
+.logo img{
+    width: 80px; 
+}
+header .top-row div{
+    display: flex; 
+    margin: 10px; 
+    font-size: 30px; 
+    color: white;
+    align-items: center; 
+}
+header .top-row h2{
+    margin-right: 10px; 
+}
+.sign-btn{
+    margin: 10px; 
+    margin-right: 20px; 
+    border-radius: 50px; 
+    width: 100px;
+    height: 50px;  
+    background-color: #B22222; 
+    font-size: 18px; 
+    color: white; 
+    border: none; 
+}   
+/* bottom row text */
+.bottom-row{
+    padding: 15px; 
+}
+.main-text{
+    font-size: 35px;
+    color: white; 
+}
+.secondary-text{
+    font-size: 25px; 
+    color: white; 
+}
+.description-text{
+    font-size: 18px; 
+    color: white; 
+}
+/* content */ 
+.content{
+    background-color: #ADD8E6; 
+    display: flex; 
+    justify-content: space-around;
+    width: 100%; 
+}
+/* styling the post */
+.post{
+    display: block; 
+    background-color: whitesmoke; 
+    width: 40%; 
+    margin: 20px; 
+    border-radius: 30px; 
+}
+.post-img, .post-img img{
+    display: block; 
+    background-color: black; 
+    width: 100%; 
+    height: 350px;  
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; 
+}
+.post p{
+    padding: 10px; 
+    text-align: justify; 
+}
+/* table */ 
+table{
+    text-align: center; 
+    border: #404040; 
+    position: relative; 
+    left: 10%; 
+}
+tr:nth-child(1){
+    background-color: #404040; 
+    color: white; 
+}
+
+/* footer */ 
+footer{
+    font-size: 16px; 
+    color: white; 
+    background-color: firebrick; 
+    padding: 10px; 
+}
