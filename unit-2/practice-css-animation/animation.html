@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <style>
+            @keyframes changeColor{
+                from{background-color: red; }
+                to{background-color: yellow; }
+            }
+            @keyframes multicolor{
+                0%{
+                    background-color: black; 
+                }
+                25%{
+                    background-color: palevioletred; 
+                }
+                50%{
+                    background-color: paleturquoise; 
+                }
+                100%{
+                    background-color: pink; 
+                }
+            }
+            #div1{
+                width: 100px; 
+                height: 100px; 
+                background-color: black; 
+                animation-name: changeColor; 
+                animation-duration: 4s; 
+            }
+            #div2{
+                width: 100px; 
+                height: 100px; 
+                margin: 10px; 
+                background-color: black;
+                animation: multicolor 5s ease-in infinite alternate; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+
+        </div>
+        <div id="div2">
+            
+        </div>
+    </body>
+</html> 

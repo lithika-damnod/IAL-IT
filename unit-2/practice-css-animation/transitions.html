@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <style>
+            .div{
+                width: 100px;
+                height: 100px;
+                background: red;  
+                margin: 20px;  
+            }
+            #div1 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width  2s, height 4s;
+                transition-timing-function: ease-out; /* specifies the speed of the transition during time frames */ 
+                transition-delay: 2s;  /* specifies the delay time for the transition */ 
+            }
+            #div1:hover{
+                width: 300px; 
+                height: 3000px; 
+            }
+            #div2{
+                transition: width 2s, height 2s, transform 2s; 
+                transition-timing-function: ease-in; 
+            }
+            #div2:hover{
+                width: 100px; 
+                height: 50px; 
+                transform: scale(2, 2) translateX(30px);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2" class="div"></div>
+        
+    </body>
+</html>
