@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <script>
+            var prev_passwd = "thopeachchitapissu"; 
+            var new_passwd = ""; // initially null
+            // 1st part
+            function validateOldPassword(){
+                var old_passwd = document.getElementById("oldPassword").value; 
+                if(old_passwd !== prev_passwd){
+                    console.log("not matching");
+                    document.getElementById("oldPassword").style.border = "2px solid red"; 
+                    document.getElementById("oldPassword").value = ""; // clears the value in the input box
+                    // diable all other input fields
+                    document.getElementById("rePassword").disabled = true; 
+                    document.getElementById("newPassword").disabled = true; 
+                }
+                else{
+                    document.getElementById("oldPassword").style.border = "2px solid green"; 
+                    // enable input fields
+                    document.getElementById("rePassword").disabled = false; 
+                    document.getElementById("newPassword").disabled = false; 
+                }
+            }
+            // second part 
+            function validateNewPassword(){
+                var newPasswd = document.getElementById("newPassword").value; 
+                if(newPasswd === prev_passwd){
+                    // if this equals to the previous password
+                    document.getElementById("error").innerHTML = "thota pissuda tho ekama password ekamane gahuwe, ballo!";
+                    console.log("error caught");  
+                    // disable the reenter password field
+                    document.getElementById("rePassword").disabled = true; 
+                }
+                else{
+                    //remove the error msg if shown
+                    document.getElementById("error").innerHTML = ""; 
+                    // enable the input field 
+                    document.getElementById("rePassword").disabled = false; 
+                    // initialize the new accepted password to variable new_passwd
+                    new_passwd = newPasswd; 
+                }
+            }
+            // 3rd part 
+            function validateRePassword(){ 
+                var rePasswd = document.getElementById("rePassword").value; 
+                // if both passwords are the same
+                if(rePasswd === new_passwd){
+                    var successMsg = document.getElementById("success"); 
+                    successMsg.style.color = "green";  // set the font color to green 
+                    successMsg.innerHTML = "NSFW: But you did a good work changing your password";  // this is "NOT SUITABLE FOR WORK"
+                    document.getElementById("error-2").innerHTML = ""; 
+                }
+                else{
+                    var badMsg = document.getElementById("error-2"); 
+                    badMsg.style.color = "red"; 
+                    badMsg.innerHTML = "SFW: Good to here that you couldn't change your password 😂"; 
+                    // hide prev msg
+                    document.getElementById("success").innerHTML = ""; 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+
+            <label for="old_password">Old Password: </label>
+                <input type="text" name="old_password" id="oldPassword" onblur="validateOldPassword()"> <!-- Old password  --><br>
+
+            <label for="new_password">New Password: </label>
+                <input type="text" id="newPassword" name="new_password" onblur="validateNewPassword()"> <!-- New Password --><br>
+                <p id="error" style="color: red"></p>
+            <label for="re-password">Reenter password: </label>
+                <input type="text" name="re-password" id="rePassword" onblur="validateRePassword()">
+                <marquee id="error-2"></marquee>
+                <marquee id="success"></marquee>
+        </form>
+    </body>
+</html>
