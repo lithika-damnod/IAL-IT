@@ -4,17 +4,45 @@
     <title>Space Tech</title>
     <script>
         //add your javascript code here
-       
+       var attemptsLeft = 3;
+       console.log(attemptsLeft); 
+       function checkLogin(){ 
+         if(attemptsLeft !== 0){
+
+          var username = document.getElementById("inputUsername").value; 
+          var password = document.getElementById("inputPassword").value; 
+          // check whether the username and password matches
+           if(username === "user" && password === "password123"){
+             window.location.href="success.html"; 
+           }
+           // if the username and password is wrong
+           else{
+              attemptsLeft--;   
+              console.log(attemptsLeft); 
+              document.getElementById("attemptsLeft").innerHTML = "Attempts left: " + attemptsLeft; 
+              if(attemptsLeft === 0){
+                  // display the error message
+                  document.getElementById("error").innerHTML = "You exceeded the number of attempts";
+                  // disable the form
+                  document.getElementById("inputUsername").disabled = true; 
+                  document.getElementById("inputPassword").disabled = true; 
+              }
+            }
+         }
+        }
+    
     </script>
   </head>
   <body>
 		<h2>Enter log in details</h2>
-		<form>
+		<form id="input-login">
         <fieldset style="width:15%">
     		  <p>Enter Username :<input type="text" id="inputUsername"></p>
     		  <p>Enter Password :<input type="password" id="inputPassword"></p>
       </fieldset>
        <p><input type="button" value="Login" id="submit" onclick="checkLogin()"></p>
 		</form>
+    <p id="attemptsLeft">Attempts Left: 3</p>
+    <p id="error" style="color: red;"></p>
  </body>
 </html>
